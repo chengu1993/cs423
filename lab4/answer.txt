@@ -1,0 +1,28 @@
+=================================================
+I run the Test program 10 times with size of reference string equal to 50 and
+number of frames equal to 7.
+
+Number of Page Faults
+FIFO 16 16 16 20 24 21 19 15 18 16
+LRU  17 20 16 23 19 19 16 17 17 17
+
+Does one algorithm perform better than the other?
+No. We can see from the table above that sometimes FIFO performs better 
+while sometimes LRU has less number of page faults. In reality, LRU should
+be better than FIFO because there is a pattern in referenece string in reality.
+However, the refernece string generated here is purely random. Knowing the past
+does not necessarilly improve the performance.
+
+Is there an optimal number of page frames for a given reference string size?
+In this lab, yes. Let's consider the following 2 scenarios.
+
+Scenarios 1: The reference string size is smaller than 9.
+Let denote reference string size as S. Then the optimalnumber of page frames 
+should be larger than or equal to the reference string size. Even all the 
+page number in reference string is different. It will guarantee that there 
+will only be S page faults.
+
+Scenarios 2: The refernce string size is larger than or euqal to 9.
+Becuase the generator only generate sequence with 1 to 9. As long as the 
+number of page frames is larger than or equal to 9. There will be only 9 page 
+faults no matter what the reference string size is. 
