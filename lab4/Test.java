@@ -21,11 +21,13 @@ public class Test
 		ReplacementAlgorithm fifo = new FIFO(new Integer(args[1]).intValue());
 		ReplacementAlgorithm lru = new LRU(new Integer(args[1]).intValue());
 
+		ReplacementAlgorithm lru_1 = new LRU_1(new Integer(args[1]).intValue());
+
 		// output a message when inserting a page
 		for (int i = 0; i < referenceString.length; i++) {
 			System.out.println("inserting " + referenceString[i]);
 			lru.insert(referenceString[i]);
-
+//			lru_1.insert(referenceString[i]);
 		}
 
 		// output a message when inserting a page
@@ -36,6 +38,7 @@ public class Test
 
 		// report the total number of page faults
 		System.out.println("LRU faults = " + lru.getPageFaultCount());
+//		System.out.println("LRU faults = " + lru_1.getPageFaultCount());
 		System.out.println("FIFO faults = " + fifo.getPageFaultCount());
 	}
 }

@@ -3,8 +3,8 @@ I run the Test program 10 times with size of reference string equal to 50 and
 number of frames equal to 7.
 
 #fames  1  2  3  4  5  6  7  8  9  10
-FIFO    20 15 15 10 9  6  6  6  6  6
-LRU     20 17 12 8  7  6  6  6  6  6
+FIFO    20 16 16 20 24 21 19 15 18 16
+LRU     20 20 16 23 19 19 16 17 17 17
 
 Does one algorithm perform better than the other?
 No. We can see from the table above that sometimes FIFO performs better 
